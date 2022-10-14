@@ -30,7 +30,9 @@ const Hero = () => {
     field.onChange(dateParams.selection);
   };
 
-  const onSubmit: SubmitHandler<FormValues> = (data) => {};
+  const onSubmit: SubmitHandler<FormValues> = (data) => {
+    console.log(data);
+  };
   return (
     <div className="h-[600px] my-10  relative">
       <div className="bg-black/50 absolute w-full h-full z-10"></div>

@@ -10,7 +10,7 @@ export interface FormValues {
   guests: number;
 }
 
-export interface Hotel {
+export interface HotelType {
   title: string;
   price: number;
   hotelImage: string;

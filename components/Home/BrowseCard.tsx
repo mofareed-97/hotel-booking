@@ -1,13 +1,14 @@
 import Image from "next/image";
 import React from "react";
-import { Hotel } from "../../types";
+import { HotelType } from "../../types";
+import { motion } from "framer-motion";
 
 interface IProps {
-  item: Hotel;
+  item: HotelType;
 }
 const BrowseCard = ({ item }: IProps) => {
   return (
-    <div className="h-[500px] flex flex-col gap-6 bg-transparent rounded-2xl p-3 overflow-hidden group group-hover:bg-white hover:shadow-xl easeHover">
+    <motion.div className="min-h-[500px] min-w-[300px] flex flex-col gap-6 bg-transparent rounded-2xl p-3 overflow-hidden group group-hover:bg-white hover:shadow-xl easeHover">
       <div className="relative h-2/4 w-full rounded-2xl overflow-hidden">
         <Image
           src={item.hotelImage}
@@ -42,7 +43,7 @@ const BrowseCard = ({ item }: IProps) => {
       <button className="bg-secondary-50 text-gray-700 py-4 w-full rounded-full font-medium opacity-0 group-hover:opacity-100 hover:bg-secondary-200 easeHover">
         View Availability
       </button>
-    </div>
+    </motion.div>
   );
 };
 
